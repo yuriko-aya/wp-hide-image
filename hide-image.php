@@ -14,7 +14,7 @@ add_action('the_content', 'hide_image');
 function hide_image($content) {
     global $post;
     if (!is_user_logged_in()) {
-        $dom_document = new domDocuemnt;
+        $dom_document = new domDocument;
         $dom_document->loadHTML($content);
         $images = $dom_document->getElementByTagName(img);
         foreach ($image as $image) {
