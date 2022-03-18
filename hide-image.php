@@ -17,7 +17,7 @@ function hide_image($content) {
         $dom_document = new domDocument;
         $dom_document->loadHTML($content);
         $images = $dom_document->getElementsByTagName('img');
-        foreach ($image as $image) {
+        foreach ($images as $image) {
             $info = $dom_document->createElement('i', 'Login to see the image');
             $image->parentNode->replaceChild($info, $image);
         }
