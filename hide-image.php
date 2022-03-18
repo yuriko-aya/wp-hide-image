@@ -21,7 +21,8 @@ function hide_image($content) {
             $info = $dom_document->createElement('i', 'Login to see the image');
             $image->parentNode->replaceChild($info, $image);
         }
-        return $dom_document->saveHTML();
+        $new_content = $dom_document->saveHTML();
+        return $new_content;
     } else {
         return $content;
     }
